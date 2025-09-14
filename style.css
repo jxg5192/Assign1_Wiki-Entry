@@ -1,0 +1,186 @@
+
+
+/* adding a custom font to the wiki */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Comic Neue", cursive;
+}
+
+
+h1 {
+  text-align: center;  
+  background-color: #E8F9FD;   
+  border: 3px solid #ff4b5c; 
+  color: #ff4b5c; 
+  padding: 20px;                
+  margin: 20px auto;        
+  width: 80%;            
+  border-radius: 15px;   
+}
+
+
+h2{
+    color: #2A9D8F;
+}
+
+main{
+  width: 72%;                 /* to make it a bit smaller than the heaser box */
+  margin: 20px auto 48px;     /* center it */
+  padding: 24px 28px;
+  background: #FFFFFF;        /* super readable */
+  border: 2px solid rgba(255,111,97,0.6); 
+  border-radius: 14px;
+ line-height: 1.6;
+}
+
+
+nav {
+  width: 60%;                  
+  margin: 20px auto;            /* this centers the WHOLE nav box */
+  padding: 15px 0;                         
+
+}
+
+
+
+
+nav ul {
+    text-align: center; 
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    justify-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+nav a{
+text-decoration: none;        /* remove underline */
+  color: #ff4b5c;               /* coral (matches your theme) */
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  
+}
+
+
+nav a:hover {
+    color:rgba(255,111,97,0.6) ;
+}
+
+
+
+a {
+  text-decoration: none;        /* remove underline */
+  color:rgba(255,111,97,0.6);               /* coral (matches your theme) */
+   font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  font-size: 15px; 
+}
+
+a:hover {
+  color: #ff4b5c; 
+}
+
+
+
+
+.story-page main {
+  line-height: 1.85;
+  font-size: 17px;
+}
+
+.story-page h3 {
+  font-family: "Comic Neue", cursive;
+
+}
+
+.story-page blockquote {
+  margin: 12px 0 16px 24px;
+  padding: 12px 16px;
+  background: #FFF8F6;
+  font-style: italic;
+  border-radius: 8px;
+}
+
+
+
+
+
+/* SETTING */
+.setting-page section h4 {
+  font-size: 0.9em;
+  color: #2A9D8F;
+  font-family: "Comic Neue", cursive;
+  margin-top: -6px;
+}
+
+
+/* GALLERY */
+
+/*  layout for the images */
+.gallery {
+  width: 72%;
+  margin: 20px auto 40px;
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-columns: repeat(3, minmax(240px, 1fr)); */
+  gap: 24px;
+}
+
+/* for the cards */
+.card {
+  background: #fff;
+  border: 2px solid rgba(255,111,97,0.6); /* soft coral */
+  border-radius: 14px;
+  padding: 16px 18px;
+ 
+}
+
+/* TITLES INSIDE CARDS */
+.card h2 {
+  margin: 6px 0 10px;
+  color: #2A9D8F;                 
+  font-family: "Comic Neue"; 
+  text-align: center;
+}
+
+
+/* IMAGES: uniform size, keep whole image */
+.card img {
+  width: 100%;
+  height: 220px;         
+  object-fit: contain;      
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+
+.card h4 {
+  font-size: 0.9em;
+  color: #2A9D8F;
+  font-family: "Comic Neue", cursive;
+  margin-top: -6px;
+}
+
+/* TEXT SPACING IN CARDS */
+.card h4 { margin: 8px 0 10px; font-weight: 600; }
+.card p  { margin: 6px 0; }
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 900px) {
+  .gallery { grid-template-columns: repeat(2, minmax(240px,1fr)); }
+}
+@media (max-width: 580px) {
+  .gallery { grid-template-columns: 1fr; }
+  .card img { height: 200px; }
+}
