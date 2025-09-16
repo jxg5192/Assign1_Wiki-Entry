@@ -9,6 +9,7 @@
 /* font for body text */
 body {
   font-family: "Nunito", sans-serif;
+ line-height: 1.7;
 }
 
 
@@ -21,6 +22,7 @@ h1, h2, h3 {
 
 /* styling for the title text */
 h1 {
+  letter-spacing:.5px;
   text-align: center;  
   /* background-color: #E8F9FD;    */
 
@@ -29,14 +31,15 @@ h1 {
   /* background-color: #F0FBF5;  */
 
   /* border: 3px solid #ff4b5c;  */
-    border: 1px solid #2A9D8F; 
+    border: 2px solid #2A9D8F; 
   color: #ff4b5c; 
-  text-shadow: 2px 2px rgba(255, 75, 92, 0.3);    /* NEW PROPERTY: text shadow */
+ 
+  text-shadow: 0 2px 0 rgba(255,75,92,.15);    /* NEW PROPERTY: text shadow */
   /* color: #2A9D8F; */
   padding: 20px;                
   margin: 20px auto;    
   /* margin: 0 auto 20px;     */
-  width: 45%; 
+  width: 55%; 
   /* width: 62%;  */
   border-radius: 15px;   
 }
@@ -45,6 +48,7 @@ h1 {
 /* styling for the subheadings */
 h2{
     color: #2A9D8F;
+  
 }
 
 
@@ -65,6 +69,7 @@ main{
 
 
 
+
 nav {
   width: 100%;               
   margin: 20px auto;
@@ -78,8 +83,8 @@ nav ul {
   background-color: #E6F7ED; 
   /* border: 2px solid #ff4b5c; */
   /* border: 2px solid rgba(255,111,97,0.6);  */
-  border: 1px solid #2A9D8F; 
-  border-radius: 12px;
+  border: 2px solid #2A9D8F; 
+  border-radius: 14px;
 }
 
 nav li {
@@ -92,13 +97,16 @@ nav a {
   color: #ff4b5c;
   font-weight: bold;
   font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  padding: 8px 10px;
+  border-radius: 9px;
 }
 
 
 /* when hover, copy the styling of the heading */
 nav a:hover {
   background-color: rgba(230, 247, 237, 0.6);
-    color:rgba(255,111,97,0.6);          
+    color:rgba(255,111,97,0.6);      
 }
 
 
@@ -181,7 +189,7 @@ a:hover {
 
 /*  layout for the images... 3 columns */
 .gallery {
-  width: 85%;
+  width: 100%;
   margin: 20px auto 40px;
   display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
@@ -214,7 +222,7 @@ a:hover {
   object-fit: contain;    /* full image w no cropping */  
   display: block;
   border-radius: 10px;
-  margin-bottom: 10px;      /* space below the image */
+  margin-bottom: 25px;      /* space below the image */
 }
 
 
@@ -223,7 +231,7 @@ a:hover {
   font-size: 0.9em;
   color: #2A9D8F;
   font-family: "Comic Neue", cursive;
-  margin-top: -6px;
+  margin-top: -6px;  
 }
 
 /* text spacing inside the cards */
