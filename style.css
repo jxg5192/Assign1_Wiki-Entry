@@ -25,14 +25,19 @@ h1 {
   /* background-color: #E8F9FD;    */
 
   background-color: #E6F7ED; 
-  border: 3px solid #ff4b5c; 
+  /* background-color: #FFF9E6; */
+  /* background-color: #F0FBF5;  */
+
+  /* border: 3px solid #ff4b5c;  */
+    border: 1px solid #2A9D8F; 
   color: #ff4b5c; 
   text-shadow: 2px 2px rgba(255, 75, 92, 0.3);    /* NEW PROPERTY: text shadow */
   /* color: #2A9D8F; */
   padding: 20px;                
-  margin: 20px auto;        
-  width: 80%;            
+  margin: 20px auto;    
+  /* margin: 0 auto 20px;     */
   width: 45%; 
+  /* width: 62%;  */
   border-radius: 15px;   
 }
 
@@ -46,62 +51,55 @@ h2{
 
 /* body styling */
 main{
-  width: 62%; 
+  width: 60%; 
   margin: 20px auto 48px;     /* center */
   padding: 24px 28px;
   background: #FFFFFF;      
-  border: 2px solid rgba(255,111,97,0.6); 
+  /* border: 1px solid rgba(255,111,97,0.6);  */
   border-radius: 14px;
  line-height: 1.6;
- box-shadow: 0 4px 12px rgba(255,75,92,0.15);      /* NEW PROPERTY: box shadow */
+ box-shadow: 0 4px 12px rgba(255, 75, 93, 0.287);      /* NEW PROPERTY: box shadow */
 }
 
 
 
 
-
-
-
-
-/* NAVIGATION BAR & LINKS STYLING */
 
 nav {
-  width: 60%;                  
-  margin: 20px auto;        
-  padding: 15px 0;                         
-
+  width: 100%;               
+  margin: 20px auto;
 }
 
-/* 4 column grid, removing bullets, and centering */
 nav ul {
-    text-align: center; 
-    list-style: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 5px;
-    justify-items: center;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  padding: 10px 20px;
+  margin: 0 auto;            /* centering box */
+  width: max-content;       
+  background-color: #E6F7ED; 
+  /* border: 2px solid #ff4b5c; */
+  /* border: 2px solid rgba(255,111,97,0.6);  */
+  border: 1px solid #2A9D8F; 
+  border-radius: 12px;
 }
 
-/* removing the underline and giving them a color */
-nav a{
-text-decoration: none;        
-  color: #ff4b5c;               
+nav li {
+  display: inline-block;     /*  links in a row */
+  margin: 0 12px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ff4b5c;
   font-weight: bold;
   font-family: "Nunito", sans-serif;
-  
 }
+
 
 /* when hover, copy the styling of the heading */
 nav a:hover {
   background-color: rgba(230, 247, 237, 0.6);
-  border-radius: 40px;
-  border: 1.5px solid #ff4b5c; 
-   padding: 5px;
-  color: #ff4b5c;            
+    color:rgba(255,111,97,0.6);          
 }
-
 
 
 /* removing the underline and adding color to the links within pages */
@@ -174,11 +172,11 @@ a:hover {
   width: 62%; 
   margin: 20px auto 48px;     /* center */
   padding: 24px 28px;
-  background-color: rgba(230, 247, 237, 0.6);  
-  border: 2px solid rgba(255,111,97,0.6); 
+  /* background-color: rgba(230, 247, 237, 0.6);   */
+  /* border: 2px solid rgba(255,111,97,0.6);  */
   border-radius: 14px;
  line-height: 1.6;
- box-shadow: 0 4px 12px rgba(255,75,92,0.15);      /* NEW PROPERTY: box shadow */
+      
 }
 
 /*  layout for the images... 3 columns */
