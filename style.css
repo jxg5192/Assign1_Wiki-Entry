@@ -73,13 +73,15 @@ main{
  box-shadow: 0 4px 12px rgba(255, 75, 93, 0.287);      /* NEW PROPERTY: box shadow */
 }
 
+/* styling body for mobile */
+
 @media (max-width: 600px){
 
   main{
     width: 90%;
     padding: 18px 18px;
-    font-size: 18px;         /* slightly larger body text on phones */
-    line-height: 1.9;        /* easier to read */
+    font-size: 18px;         /* making the font bigger on phones */
+    line-height: 1.9;        /* adding more spacing btwn lines for phones */
     font-size: 20px;
     margin: 10px 0 14px;
   }
@@ -105,11 +107,11 @@ nav ul {
   border: 2px solid #2A9D8F;
   border-radius: 14px;
 
-  display: grid;                   /* turn ul into grid container */
-  grid-template-columns: repeat(4, auto);    /* 4 columns... one per link */
-  gap: 16px;                       /* adding spacing between links */
+  display: grid;                   /* turning layout into grid  */
+  grid-template-columns: repeat(4, auto);    /* making 4 columns... 1 per link */
+  gap: 16px;                       /* adding spacing between the links */
   justify-content: center;         /* centering grid inside box */
-  width: fit-content;    /* shrinking mint green box  */
+  width: fit-content;    /* shrinking the mint green box around the links */
 }
 
 nav li {
@@ -126,14 +128,14 @@ nav a {
   text-align: center; /* center link text */
 }
 
-/* when hover, copy the styling of the heading */
+/* when hover, make font a lighter sahde of coral */
 nav a:hover {
-  background-color: rgba(230, 247, 237, 0.6);
+  /* background-color: rgba(230, 247, 237, 0.6); */
     color:rgba(255,111,97,0.6);      
 }
 
 
-/* removing the underline and adding color to the links within pages */
+/* removing the underline and adding color to the links within pages (back to home) */
 a {
   text-decoration: none;       
   color:rgba(255,111,97,0.6);               
@@ -146,28 +148,28 @@ a:hover {
   color: #ff4b5c; 
 }
 
-/* for mobile stack the nav links vertically instead of next to each other & center them */
+/* for mobile stack the nav links vertically but in 2 cols and center them */
 @media (max-width: 600px) {
   nav ul {
     display: grid;  
     grid-template-columns: 1fr 1fr;   
     gap: 10px;
-    justify-items: center;        /* center each link */
-    width: 100%;                  /* let it span full width */
-    background: none;             /* remove big green box */
-    border: none;                 /* remove border */
+    justify-items: center;        /* centering each link */
+    width: 100%;                 
+    background: none;             /* removing green box that i have in the desktop version */
+    border: none;                 /* removing border from ^^^ */
     padding: 0;
   }
 
   nav a {
-    display: block;               /* make each link a box */
+    display: block;               /* making each link have its own box */
     background-color: #E6F7ED;    /* mint green background */
-    border: 1px solid #2A9D8F;    /* border around each */
+    border: 1px solid #2A9D8F;    /* border around each box*/
     border-radius: 8px;
     padding: 4px 8px;
     margin: 2px 0;                /* space between links */
-    width: 70%;                   /* smaller box width */
-    text-align: center;           /* center text */
+    width: 70%;                  
+    text-align: center;           
     font-size: 10px; 
     line-height: 1.3;
   }
@@ -179,12 +181,12 @@ a:hover {
   font-family: "Nunito", sans-serif;
   font-size: 15px; 
   display: block;               /* make each link a box */
-  background-color: #E6F7ED;    /* mint green background */
-  border: 1px solid #2A9D8F;    /* border around each */
+  background-color: #E6F7ED;    
+  border: 1px solid #2A9D8F;   
   border-radius: 10px;
   padding: 8px 14px;
-  margin: 6px auto;                /* space between links */
-  width: 80%;                   /* smaller box width */
+  margin: 6px auto;               
+  width: 80%;                  
   text-align: center; 
 }
 
@@ -201,7 +203,7 @@ a:hover {
 
 /* STORY PAGE STYLING */
 
-/* adding spacing & inc font for the story */
+/* adding bigger line spacing & increaing font for the story */
 .story-page main {
   line-height: 1.85;
   font-size: 17px;
@@ -213,7 +215,7 @@ a:hover {
 
 }
 
-/* stlying for the blockquotes in the story... giving it a light orange  box */
+/* stlying for the blockquotes in the story... giving it a light teal  box */
 .story-page blockquote {
   margin: 12px 0 16px 24px;
   padding: 12px 16px;
@@ -224,8 +226,8 @@ a:hover {
 }
 
 
+/* mobile tweaks for the story page */
 @media (max-width: 600px){
-  /* scale title box sensibly if you use one */
   .story-page h1{
     font-size: clamp(22px, 6vw, 28px);
     width: 88%;
@@ -236,8 +238,8 @@ a:hover {
   .story-page main{
     width: 90%;
     padding: 18px 18px;
-    font-size: 18px;         /* slightly larger body text on phones */
-    line-height: 1.9;        /* easier to read */
+    font-size: 18px;         /*  larger text on phones */
+    line-height: 1.9;        /*  more line height for the story on phones */
   }
 
   .story-page h3{
@@ -262,7 +264,7 @@ a:hover {
   grid-template-columns: repeat(2, minmax(280px, 1fr));
   gap: 28px; /* spacing for between Meadow & Forest  */
 }
-/* Card  for each habitat */
+/* making 1 card  for each habitat */
 .setting-page .habitat {
   background: #fff;
   border: 2px solid rgba(255,111,97,0.6); 
@@ -270,7 +272,7 @@ a:hover {
   padding: 18px 22px;
   box-shadow: 0 4px 10px rgba(255,75,92,0.08);
 }
-/*  spacing inside the cards */
+/*   inside the cards */
 .setting-page .habitat h2 {
   margin: 4px 0 10px;
   color: #2A9D8F;
@@ -292,6 +294,7 @@ a:hover {
   margin: 4px 0;
 }
 
+/* for mobile, just 1 column grid  */
 @media (max-width: 820px) {
   .setting-page main {
     grid-template-columns: 1fr; /* just 1 column with Meadow on top of Forest for mobile  */
@@ -312,7 +315,7 @@ a:hover {
 
 /* HISTORY PAGE STYLING */
 
-/* creating grid container for history pg */
+/* creating grid container for history page */
 .history-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -332,12 +335,14 @@ a:hover {
   grid-column: 1 / -1;
 }
 
-/* Optional: headings inside cards keep your theme */
+
 .story-card h2 {
   color: #2A9D8F;
   font-family: "Comic Neue", cursive;
   margin: 0 0 12px;
 }
+
+/* for mobile... stack the grid vertically  */
 @media (max-width: 820px) {
   .setting-page main {
     grid-template-columns: 1fr; /* Meadow on top of Forest for mobile layout */
@@ -425,8 +430,8 @@ a:hover {
 
     width: 90%;
     padding: 18px 18px;
-    font-size: 18px;         /* slightly larger body text on phones */
-    line-height: 1.9;        /* easier to read */
+    font-size: 18px;         /*  larger body text on phones */
+    line-height: 1.9;       
     font-size: 20px;
     margin: 10px 0 14px;
 
