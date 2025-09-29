@@ -136,7 +136,7 @@ nav a:hover {
 
 
 /* removing the underline and adding color to the links within pages (back to home) */
-a {
+/* a {
   text-decoration: none;       
   color:rgba(255,111,97,0.6);               
    font-weight: bold;
@@ -146,6 +146,28 @@ a {
 
 a:hover {
   color: #ff4b5c; 
+} */
+
+p a {
+  display: inline-block;         /* so padding & background apply properly */
+  padding: 6px 16px;             /* button padding */
+  font-size: 15px;
+  font-weight: normal;
+  font-family: "Nunito", sans-serif;
+  text-decoration: none;
+  color: white;                  /* text color */
+  background-color: rgba(255,111,97,0.6); /* coral background */
+  border-radius: 25px;            /* rounded corners */
+  border: none;
+  transition: all 0.3s ease;     /* smooth hover effect */
+}
+
+/* Hover effect */
+p a:hover {
+  background-color: #ff4b5c;   /* brighter coral */
+  transform: scale(1.05);      /* slight zoom on hover */
+  font-weight: bold; 
+    color: white;
 }
 
 /* for mobile stack the nav links vertically but in 2 cols and center them */
@@ -420,6 +442,33 @@ a:hover {
 .card p  { margin: 6px 0; }
 
 
+.details {
+  transition: opacity 0.4s ease;
+  opacity: 1;
+}
+
+.details.hide {
+  opacity: 0;
+  display: none;   /* hide completely */
+}
+
+.buttonStyle {
+
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #E6F7ED;
+  color: #2A9D8F;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold; 
+
+
+}
+.buttonStyle:hover {  background-color: #2A9D8F;   
+  transform: scale(1.05);    
+  font-weight: bold; 
+    color: white; }
 
 
 /* for mobile stack gallery cards into 1 single column & make pics smaller so they fit better on the screen */
@@ -439,3 +488,8 @@ a:hover {
 }
 
 
+
+.faded {
+  color: #aaa;   /* greyed out */
+  transition: color 0.5s ease;
+}
