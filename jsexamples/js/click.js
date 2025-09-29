@@ -45,7 +45,6 @@ quotes.forEach(function(quote) {
       // Show the real text
       quote.innerHTML = actualText;
       quote.style.backgroundColor = "rgba(255,75,92,.15)";
-      quote.style.fontWeight = "bold";
     } else {
       // Reset to placeholder
       quote.innerHTML = "Click me!";
