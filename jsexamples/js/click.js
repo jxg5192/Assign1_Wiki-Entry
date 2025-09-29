@@ -55,21 +55,8 @@ quotes.forEach(function(quote) {
 });
 
 
-// // Only run on the story page
-// if (document.body.classList.contains("story-page")) {
-//   let storyBox = document.querySelector("main"); // the white inner box
 
-//   window.addEventListener("scroll", function () {
-//     if (window.scrollY > 50) {
-//       storyBox.style.backgroundColor = "rgba(230, 247, 237, 0.6)"; // light pink
-//     } else {
-//       storyBox.style.backgroundColor = "white"; // reset to white
-//     }
-//   });
-// }
-
-
-
+// only for the story page, grab the paragpahs, blockquotes, lists, and h3
 if (document.body.classList.contains("story-page")) {
   let elements = document.querySelectorAll("main p, main blockquote, main li, main h3");
 
@@ -92,15 +79,15 @@ if (document.body.classList.contains("story-page")) {
 }
 
 
-document.addEventListener("DOMContentLoaded", () => {
+
   // grabbing all the buttons
-  const toggles = document.querySelectorAll(".toggleBtn");
+  let toggles = document.querySelectorAll(".toggleBtn");
 
   toggles.forEach((btn) => {
     btn.addEventListener("click", () => {
 
       // grabbing details for that card to show fun facts & personality info
-      const details = btn.nextElementSibling;
+      let details = btn.nextElementSibling;
       details.classList.toggle("hide");  
 
       // update button text when clickied
@@ -111,4 +98,19 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-});
+
+
+
+
+
+  document.getElementById("meadow").addEventListener("click", function(){
+    document.getElementById("meadow").style.border = "2px dashed green";
+    document.getElementById("forest").style.border = "2px solid rgba(255,111,97,0.6)";
+  }); 
+
+
+
+   document.getElementById("forest").addEventListener("click", function(){
+    document.getElementById("forest").style.border = "2px dashed green";
+    document.getElementById("meadow").style.border = "2px solid rgba(255,111,97,0.6)";
+  }); 
