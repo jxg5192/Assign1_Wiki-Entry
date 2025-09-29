@@ -37,16 +37,16 @@ quotes.forEach(function(quote) {
   // Store the real text in a variable
   let actualText = quote.innerHTML;
 
-  // Replace the visible text with the placeholder
+  // Replacing the visible text 'click me' till it gets clicked
   quote.innerHTML = "Click me!";
 
   quote.addEventListener("click", function () {
     if (quote.innerHTML === "Click me!") {
-      // Show the real text
+      // when user clicks, if current text is 'click me', show the real text & turn it pink
       quote.innerHTML = actualText;
       quote.style.backgroundColor = "rgba(255,75,92,.15)";
     } else {
-      // Reset to placeholder
+      // when user clicks, if current text is the quote, switch back to 'click me' & blue 
       quote.innerHTML = "Click me!";
       quote.style.backgroundColor = "rgba(230, 247, 237, 0.6)";
       quote.style.fontWeight = "normal";
@@ -93,14 +93,17 @@ if (document.body.classList.contains("story-page")) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
+  // grabbing all the buttons
   const toggles = document.querySelectorAll(".toggleBtn");
 
   toggles.forEach((btn) => {
     btn.addEventListener("click", () => {
-      const details = btn.nextElementSibling;
-      details.classList.toggle("hide");
 
-      // update button text
+      // grabbing details for that card to show fun facts & personality info
+      const details = btn.nextElementSibling;
+      details.classList.toggle("hide");  
+
+      // update button text when clickied
       if (details.classList.contains("hide")) {
         btn.textContent = "Learn More!";
       } else {

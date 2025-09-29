@@ -149,23 +149,23 @@ a:hover {
 } */
 
 p a {
-  display: inline-block;         /* so padding & background apply properly */
+  display: inline-block;         
   padding: 6px 16px;             /* button padding */
   font-size: 15px;
   font-weight: normal;
   font-family: "Nunito", sans-serif;
   text-decoration: none;
-  color: white;                  /* text color */
-  background-color: rgba(255,111,97,0.6); /* coral background */
-  border-radius: 25px;            /* rounded corners */
+  color: white;                  /* TEXT/font color */
+  background-color: rgba(255,111,97,0.6); /*  background of button */
+  border-radius: 25px;            /* rounded to make it look pill-shaped */
   border: none;
-  transition: all 0.3s ease;     /* smooth hover effect */
+  transition: all 0.3s ease;    
 }
 
 /* Hover effect */
 p a:hover {
   background-color: #ff4b5c;   /* brighter coral */
-  transform: scale(1.05);      /* slight zoom on hover */
+  transform: scale(1.05);      /*  zoom a bit when hover */
   font-weight: bold; 
     color: white;
 }
@@ -442,18 +442,22 @@ p a:hover {
 .card p  { margin: 6px 0; }
 
 
+/* ADDING SHOW DETAILS BUTTON TO CHAR PAGE */
+
+/* visible content */
 .details {
   transition: opacity 0.4s ease;
   opacity: 1;
 }
 
+/* hidden content */
 .details.hide {
   opacity: 0;
   display: none;   /* hide completely */
 }
 
+/* show details button styling */
 .buttonStyle {
-
   padding: 6px 14px;
   border-radius: 6px;
   border: none;
@@ -462,8 +466,6 @@ p a:hover {
   color: #2A9D8F;
   font-family: "Nunito", sans-serif;
   font-weight: bold; 
-
-
 }
 .buttonStyle:hover {  background-color: #2A9D8F;   
   transform: scale(1.05);    
