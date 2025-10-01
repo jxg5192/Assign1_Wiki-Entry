@@ -1,9 +1,14 @@
 "use strict";
 
 
+
+// character page 
 let characterImages = document.querySelectorAll(".card img");
 
-characterImages.forEach(img => {
+// zoom in on character pics on hover
+for (let i = 0; i < characterImages.length; i++) {
+  let img = characterImages[i];
+
   img.addEventListener("mouseover", function () {
     img.style.transform = "scale(1.3)";
   });
@@ -11,72 +16,91 @@ characterImages.forEach(img => {
   img.addEventListener("mouseout", function () {
     img.style.transform = "scale(1)";
   });
-});
+}
 
-document.querySelectorAll(".card img").forEach(img => {
-  img.addEventListener("mouseover", () => {
+// rotate character pics on hover
+for (let i = 0; i < characterImages.length; i++) {
+  let img = characterImages[i];
+
+  img.addEventListener("mouseover", function () {
     img.style.transform = "rotate(5deg) scale(1.1)";
   });
-  img.addEventListener("mouseout", () => {
+
+  img.addEventListener("mouseout", function () {
     img.style.transform = "rotate(0deg) scale(1)";
   });
-});
+}
 
-document.querySelectorAll(".card img").forEach(img => {
-  img.addEventListener("mouseover", () => {
+// make character pics brighter on hover
+for (let i = 0; i < characterImages.length; i++) {
+  let img = characterImages[i];
+
+  img.addEventListener("mouseover", function () {
     img.style.filter = "brightness(1.1)";
   });
-  img.addEventListener("mouseout", () => {
+
+  img.addEventListener("mouseout", function () {
     img.style.filter = "brightness(1) saturate(1)";
   });
-});
+}
 
+
+// grab all elements with hidden-quote from the story page
 let quotes = document.querySelectorAll(".hidden-quote");
 
-quotes.forEach(function(quote) {
-  // Store the real text in a variable
+// Loop through each 
+for (let i = 0; i < quotes.length; i++) {
+  let quote = quotes[i];
+
+  // Store the actual quote text from the story
   let actualText = quote.innerHTML;
 
-  // Replacing the visible text 'click me' till it gets clicked
+  // Replace the visible text with "Click me!" until it gets clicked
   quote.innerHTML = "Click me!";
 
+  //  click event listener for  quote
   quote.addEventListener("click", function () {
     if (quote.innerHTML === "Click me!") {
-      // when user clicks, if current text is 'click me', show the real text & turn it pink
+      // If current text is "Click me!" show the real text & turn it pink
       quote.innerHTML = actualText;
       quote.style.backgroundColor = "rgba(255,75,92,.15)";
     } else {
-      // when user clicks, if current text is the quote, switch back to 'click me' & blue 
+      // Otherwise switch back to "Click me!" & reset 
       quote.innerHTML = "Click me!";
       quote.style.backgroundColor = "rgba(230, 247, 237, 0.6)";
       quote.style.fontWeight = "normal";
     }
   });
-});
+}
 
 
 
-// only for the story page, grab the paragpahs, blockquotes, lists, and h3
+// Only for the story page, grab the paragraphs, blockquotes, lists, and h3
 if (document.body.classList.contains("story-page")) {
   let elements = document.querySelectorAll("main p, main blockquote, main li, main h3");
 
+  // Scroll event listener
   window.addEventListener("scroll", function () {
-    let scrollY = window.scrollY + window.innerHeight / 2;  
-    // Use middle of the screen as the "reading point"
 
-    elements.forEach(function (el) {
-      let elTop = el.offsetTop;
+    // Use middle of the screen as the "reading point" so that as you scroll, the font greys out
+    // chatgpt helped me with this
+    let readingPoint = window.scrollY + window.innerHeight / 2;  
 
-      if (elTop < scrollY) {
-        // Already scrolled past -> fade it
+    // Loop through each element with a classic for loop
+    for (let i = 0; i < elements.length; i++) {
+      let el = elements[i];
+
+      // If the element's top is above the reading point, fade it
+      if (el.offsetTop < readingPoint) {
         el.classList.add("faded");
       } else {
-        // Not yet read -> keep normal
+        // Otherwise keep  normal
         el.classList.remove("faded");
       }
-    });
+    }
   });
 }
+
 
 
 
@@ -101,15 +125,14 @@ if (document.body.classList.contains("story-page")) {
 
 
 
-
-
+// when click on meadow, change its border
   document.getElementById("meadow").addEventListener("click", function(){
     document.getElementById("meadow").style.border = "2px dashed green";
     document.getElementById("forest").style.border = "2px solid rgba(255,111,97,0.6)";
   }); 
 
 
-
+// when click on forest, change its border
    document.getElementById("forest").addEventListener("click", function(){
     document.getElementById("forest").style.border = "2px dashed green";
     document.getElementById("meadow").style.border = "2px solid rgba(255,111,97,0.6)";
