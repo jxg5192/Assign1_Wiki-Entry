@@ -104,25 +104,27 @@ if (document.body.classList.contains("story-page")) {
 
 
 
-  // grabbing all the buttons
-  let toggles = document.querySelectorAll(".toggleBtn");
+  // Grabbing  the buttons
+let toggles = document.querySelectorAll(".toggleBtn");
 
-  toggles.forEach((btn) => {
-    btn.addEventListener("click", () => {
+// Loop through each toggle button 
+for (let i = 0; i < toggles.length; i++) {
+  let btn = toggles[i];
 
-      // grabbing details for that card to show fun facts & personality info
-      let details = btn.nextElementSibling;
-      details.classList.toggle("hide");  
+  btn.addEventListener("click",function() {
 
-      // update button text when clickied
-      if (details.classList.contains("hide")) {
-        btn.textContent = "Learn More!";
-      } else {
-        btn.textContent = "Hide Details";
-      }
-    });
+    // Grab  details section for this button's card
+    let details = btn.nextElementSibling;
+    details.classList.toggle("hide");  
+
+    // Update  button text when clicked
+    if (details.classList.contains("hide")) {
+      btn.textContent = "Learn More!";
+    } else {
+      btn.textContent = "Hide Details";
+    }
   });
-
+}
 
 
 // when click on meadow, change its border

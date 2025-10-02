@@ -1,0 +1,89 @@
+
+/* 1 -> ADDING HOVER EFFECT TO TITLE */
+h1:hover {
+   color: #ff4b5c;           /* coral text */
+  background-color: #FFFFFF; /* white background */
+  box-shadow: 0 0 12px rgba(42,157,143,0.4); /* teal glow */
+  transform: scale(1.1);    /* zooms in slightly */
+    cursor: pointer;
+}
+
+
+
+/* 2 -> ADDING BUTTONS TO THE HYPERLINKS WITHIN MAIN ON THE HOMEPAGE */
+p a {
+  display: inline-block;         
+  padding: 6px 16px;             /* button padding */
+  font-size: 15px;
+  font-weight: normal;
+  font-family: "Nunito", sans-serif;
+  text-decoration: none;
+  color: white;                  /* TEXT/font color */
+  background-color: rgba(255,111,97,0.6); /*  background of button */
+  border-radius: 25px;            /* rounded to make it look pill-shaped */
+  border: none;
+  transition: all 0.3s ease;    
+}
+
+/* Hover effect */
+p a:hover {
+  background-color: #ff4b5c;   /* brighter coral */
+  transform: scale(1.05);      /*  zoom a bit when hover */
+  font-weight: bold; 
+    color: white;
+}
+
+
+
+
+/* 3 -> greying out the text as you scroll on the story pg */
+.faded {
+  color: #aaa;   
+  transition: color 0.5s ease;
+}
+
+
+
+
+
+/* 4 -> ADDING SHOW DETAILS BUTTON TO CHAR PAGE */
+
+/* visible content */
+.details {
+  transition: opacity 0.4s ease;
+  opacity: 1;
+}
+
+/* hidden content */
+.details.hide {
+  opacity: 0;
+  display: none;   /* hide completely */
+}
+
+/* show details button styling */
+.buttonStyle {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #E6F7ED;
+  color: #2A9D8F;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold; 
+}
+.buttonStyle:hover {  background-color: #2A9D8F;   
+  transform: scale(1.05);    
+  font-weight: bold; 
+    color: white; }
+
+
+
+
+    /* 5 -> ADDING A GREEN DASHED BORDER WHEN YOU CLICK ON THE HABITAT CARDS IN SETTINGS PAGE */
+    .setting-page .habitat.selected {
+  border: 2px dashed #2A9D8F; /* green dashed when u click on the habitat card */
+}
+
+#meadow, #forest {
+  cursor: pointer; 
+}
